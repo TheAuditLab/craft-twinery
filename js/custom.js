@@ -3,12 +3,6 @@
 // OnLoad
 jQuery(document).ready(function($) {
 
-
-    // Search bar toggle
-    jQuery(".search-icon").click(function(){
-        $(".search-field").toggle();
-    });
-
     jQuery(".wpcf7-select").click(function(){
         $(".wpcf7-select").addClass("active");
     })

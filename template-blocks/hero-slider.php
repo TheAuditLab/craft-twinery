@@ -8,10 +8,11 @@
     $hero_slider_image_1 = get_field("hero_slider_image_1");
     $hero_slider_title_1 = get_field("hero_slider_title_1");
     $hero_slider_link_1 = get_field("hero_slider_link_1");
-    $hero_slider_shop_text_1 = $hero_slider_1["hero_slider_shop_text_1"];
-    $hero_slider_shop_link_1 =  $hero_slider_1["hero_slider_shop_link_1"];
-    $hero_slider_read_text_1 = $hero_slider_1["hero_slider_read_text_1"];
-    $hero_slider_read_link_1 =  $hero_slider_1["hero_slider_read_link_1"];
+    $hero_slider_shop_text_1 = get_field("hero_slider_shop_text_1");
+    $hero_slider_shop_link_1 =  get_field("hero_slider_shop_link_1");
+    $hero_slider_read_text_1 =  get_field("hero_slider_read_text_1");
+    $hero_slider_read_link_1 =  get_field("hero_slider_read_link_1");
+    $hero_slider_circle_text =  get_field("hero_slider_circle_text");
 
 
     $hero_slider_image_2 = get_field("hero_slider_image_2");
@@ -36,13 +37,16 @@
         <?php
             if(($hero_slider_image_1)){
         ?>
-        <div class="home-hero-img" style="background-image: url('<?php echo $hero_slider_image_1; ?>');">
+        <div class="home-hero-img" style="background-image: url('<?php echo $hero_slider_image_1['url']; ?>');">
             <div class="container">
                 <h1 class="hero-title"><?php echo $hero_slider_title_1; ?></h1>
                 <div class="button-div">
                     <a class="shop-button" href="<?php echo $hero_slider_shop_link_1; ?>"><?php echo $hero_slider_shop_text_1; ?></a> 
                     <a class="read-button" href="<?php echo $hero_slider_read_link_1; ?>"><?php echo $hero_slider_read_text_1; ?></a> 
                 </div>
+                <div class="circle">
+                    <?php echo $hero_slider_circle_text; ?>
+                </div>                    
             </div>
         </div>
         <?php

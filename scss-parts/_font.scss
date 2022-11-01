@@ -1,16 +1,12 @@
 @font-face {
-    font-family: AlbertSans-Bold;
-    src: url("fonts/AlbertSans-Bold.otf");
+    font-family: Poppins;
+    src: url("fonts/Poppins-Regular.otf");
 }
 
 @font-face {
-font-family: AlbertSans-ExtraBold;
-src: url("fonts/AlbertSans-ExtraBold.otf");
-}
-
-@font-face {
-font-family: AlbertSans-Regular;
-src: url("fonts/AlbertSans-Regular.otf");
+    font-family: PlayfairDisplay;
+    src: url("fonts/PlayfairDisplay-Regular.otf");
+    font-weight: 100;
 }
 
 
@@ -19,7 +15,7 @@ h1, h2, h3, h4, h5 {
 }
 
  p, a, span{
-    font-family: "AlbertSans-Regular", Arial, Helvetica, sans-serif;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     line-height: 1.3;
 }
@@ -37,7 +33,8 @@ strong {
 h1{
     font-size: 24px;
     letter-spacing: 1px;
-    font-family: "AlbertSans-Bold", Arial, Helvetica, sans-serif;
+    font-family: "PlayfairDisplay", Arial, Helvetica, sans-serif;
+    font-weight: 100;
 
     @media (min-width: 520px){
         font-size: 36px;
@@ -49,7 +46,7 @@ h1{
 
 h2{
     font-size: 24px;
-    font-family: "AlbertSans-Bold", Arial, Helvetica, sans-serif !important;
+    font-family: "PlayfairDisplay", Arial, Helvetica, sans-serif !important;
     @media screen and (min-width: 480px) {
         font-size: 30px;;
     }
@@ -62,7 +59,7 @@ h2{
 h3{
     font-size: 30px;
     letter-spacing: 0.8px;
-    font-family: "AlbertSans-Bold", Arial, Helvetica, sans-serif !important;
+    font-family: "PlayfairDisplay", Arial, Helvetica, sans-serif !important;
 
     @media screen and (min-width: 768px) {
         font-size: 37px;
@@ -76,4 +73,10 @@ h4{
 h5 {
     font-size: 20px;
 }
-
+.hero-title {
+    font-size: 60px;
+    @media screen and (min-width: 768px) {
+        font-size: 90px;
+        
+    }
+}

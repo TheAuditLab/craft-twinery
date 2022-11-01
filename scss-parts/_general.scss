@@ -1,8 +1,8 @@
 /*
-Theme Name: Expert Security v2 theme
+Theme Name: Craft Twinery theme
 Author: The Audit Lab
 Author URI: https://theauditlab.com/
-Description: Expert Security v2 theme
+Description: Craft Twinery theme
 Tags: accessibility-ready, one-column, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready, blog, e-commerce, portfolio
 Version: 1.0
 Requires at least: 5.0
@@ -15,12 +15,12 @@ Text Domain: generic
 
 // Theme colours
 :root{
-    --green: #83bb55;
-    --light-grey: #c3c3c3;
-    --light-blue: #319cc2;
-    --blue: #2797c1;
-    --dark-blue: #234c76;
-    --red: #dc3232;
+    --purple: #50286b;
+    --pink: #d3a59d;
+    --yellow: #c3d34f;
+    --blue: #4fabaf;
+    --orange: #f3bd38;
+    --grey: #efeff1;
 }
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}html{scroll-behavior:smooth}body{line-height:1}a{text-decoration-skip-ink:auto}a[href^="tel"]{color:inherit;text-decoration:none}button{outline:0}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}q{display:inline;font-style:italic}q:before{content:'"';font-style:normal}q:after{content:'"';font-style:normal}textarea,input[type="text"],input[type="button"],input[type="submit"],input[type="reset"],input[type="search"],input[type="password"]{-webkit-appearance:none;appearance:none;border-radius:0}input[type="search"]{-webkit-appearance:textfield}table{border-collapse:collapse;border-spacing:0}th,td{padding:2px}big{font-size:120%}small,sup,sub{font-size:80%}sup{vertical-align:super}sub{vertical-align:sub}dd{margin-left:20px}kbd,tt{font-family:courier;font-size:12px}ins{text-decoration:underline}del,strike,s{text-decoration:line-through}dt{font-weight:bold}address,cite,var{font-style:italic}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;transition:all 0.5s ease}
@@ -102,13 +102,11 @@ table{width:100%;margin:30px 0}
 
 #menu ul{font-size:0}
 #menu ul, #menu li, #menu a{position:relative;display:inline;list-style:none;margin:0;padding:0}
-#menu li.menu-item-has-children > a:after, #menu li.page_item_has_children > a:after{font-family:serif;content:' ▾'}
 #menu a{display:inline-block;font-size:18px;text-align:right;text-decoration:none;line-height:33px;padding-bottom:10px;margin-top:-1px;margin-right:25px}
 #menu a:hover, #menu a:focus{color:#767676;text-decoration:none}
 #menu ul.sub-menu, #menu ul.children{position:absolute;display:block;top:100%;left:-9999px;margin-top:20px;transition:unset;z-index:1000}
 #menu ul.sub-menu a, #menu ul.children a{width:200px;font-size:14px;color:#333;text-align:left;line-height:20px;padding:15px;border:1px solid #eee;background:#fff}
 #menu ul.sub-menu a:hover, #menu ul.sub-menu a:focus, #menu ul.children a:hover, #menu ul.children a:focus{color:#767676;background:#f7f7f7}
-#menu li.menu-item-has-children a:hover + ul.sub-menu, #menu li.menu-item-has-children a:focus + ul.sub-menu, #menu li.menu-item-has-children a + ul.sub-menu:hover, #menu li.menu-item-has-children a + ul.sub-menu:focus-within, #menu li.page_item_has_children a:hover + ul.children, #menu li.page_item_has_children a:focus + ul.children, #menu li.page_item_has_children a + ul.children:hover, #menu li.page_item_has_children a + ul.children:focus-within{left:0}
 #menu .menu-toggle{display:none;color:#fff;text-align:center;padding:0;border:0;margin:0;background:none;transition:unset}
 #menu .menu-toggle:hover, #menu .menu-toggle:focus{color:#007acc}
 #menu .menu-icon{font-size:50px}
@@ -116,7 +114,6 @@ table{width:100%;margin:30px 0}
 .widget-container .search-field{width:100%}
 .error404 .entry-content .search-field, .search .entry-content .search-field{width:200px;margin-top:30px}
 .error404 .entry-content .search-field, .search .entry-content .search-field, .widget-container .search-field{background-color:#f6f6f6}
-.search-field{background:url(images/find.png) no-repeat 0% center / 15px auto}
 
 #site-title h1, #site-title a{display:inline;font-size:40px;font-weight:normal;color:#fff;text-decoration:none;margin-bottom:0}
 #site-description, #copyright, #copyright a{color:#8a8a8a}
@@ -218,8 +215,7 @@ h2.entry-title, h3.widget-title{margin-top:0}
 }
 
 body{
-    font-family: "AlbertSans-Regular", Arial, Helvetica, sans-serif!important;
-    background: #ffffff;
+    font-family: "Poppins", Arial, Helvetica, sans-serif!important;
     color: var(--dark-grey);
 }
 
@@ -438,43 +434,6 @@ body{
         width: 100%;
         height: 100%;
         opacity: 0.85;
-    }
-}
-
-//menu 
-.menu-item-has-children {
-    position: relative;
-    .sub-menu {
-        position: absolute;
-        z-index: 92;
-        width: 100%;
-        display:none;
-        
-        @media screen and (min-width: 1200px) {
-            background: #ffffff;
-        }
-        li {
-            padding: 10px !important;
-            &:after {
-                display: none;
-            }
-        }
-        .sub-menu {
-            display: none;
-            left: 100%;
-            top: 0;
-            margin-top: 0;
-        }
-        @media screen and (min-width: 768px) {
-            &:hover > .sub-menu  {
-                display:block !important;
-            }
-        }
-    }
-    @media screen and (min-width: 768px) {
-        &:hover > ul{
-            display:block !important;
-        }
     }
 }
 

@@ -43,71 +43,43 @@
 <?php wp_body_open(); ?>
 
 <?php
-    // Header Phone number
-    $header_phone_number = get_field("header_phone_number", 5);
-    $header_email = get_field("header_email", 5);
+
 ?>
 
 <div id="header" class="hfeed">
-    <div class="header-top-banner">
-        <div class="container">
-            <div class="logo-div">
-                <a href="/">
-                    <img class="header-logo" src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="Expert Security Logo">
-                </a>
-                <button class="mobile-menu">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </button>
-            </div>
-            <div class="contact-div">
-                <a class="tel" href="tel:<?php echo $header_phone_number; ?>">
-                    <img class="phone-icon" src="<?php bloginfo('template_url'); ?>/images/phone.svg" alt="Phone Icon">
-                    <?php echo $header_phone_number ?>
-                </a>
-                <a class="email" href="mailto:<?php echo $header_email; ?>">
-                    <img class="email-icon" src="<?php bloginfo('template_url'); ?>/images/email.svg" alt="Email Icon">
-                    <?php echo $header_email?>
-                </a>
-            </div>
-        </div>
-    </div>
-  
     <div class="container">
-        <?php
-            wp_nav_menu( array( 
-                'theme_location' => 'main-menu',
-                'after'           => '<button class="dropdown-btn"></button>', 
-                'container_class' => 'main-menu' ) ); 
-        ?>
-        <div class="header-info">
-            <div id="search">
-                <img class="search-icon" src="<?php bloginfo('template_url'); ?>/images/search.svg" alt="Search Icon">
-                <?php get_search_form(); ?>
-            </div>
-            <div class="social-icons desktop">
-                <a href="https://www.facebook.com/pages/Expert-Security-Systems-UK-LTD/514239565336592" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/images/facebook-green.svg" alt="Facebook Icon">
-                </a>
-                <a href="https://www.instagram.com/expertsecurityuk" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/images/instagram-green.svg" alt="Instagram Icon">
-                </a>
-                <a href="https://www.linkedin.com/company/expert-security-systems-uk-ltd" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/images/linkedin-green.svg" alt="LinkedIn Icon">
-                </a>
-            </div>
-            <div class="social-icons mobile">
-                <a href="https://www.facebook.com/pages/Expert-Security-Systems-UK-LTD/514239565336592" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/images/facebook-white.svg" alt="Facebook Icon">
-                </a>
-                    <a href="https://www.instagram.com/expertsecurityuk" target="_blank">
-                        <img src="<?php bloginfo('template_url'); ?>/images/instagram-white.svg" alt="Instagram Icon">
+
+        <div class="logo-header">
+                <div class="logo-div">
+                    <a href="/">
+                        <img class="header-logo" src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="Craft Twinery Logo">
                     </a>
-                </a>
-                <a href="https://www.linkedin.com/company/expert-security-systems-uk-ltd" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/images/linkedin-white.svg" alt="LinkedIn Icon">
-                </a>
+                    <button class="mobile-menu">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
+                </div>
+              
+        </div>
+        <div class="menu-header">
+            <div class="menu-top">
+                <div class="phone-number"><a href="tel:01204897642"><span><img src="<?php bloginfo('template_url'); ?>/images/phone-icon.png" alt="Phone Icon">01204 897642</span></a></div>
+                <span class="header-info">
+                    <div class="basket"><a href="/basket"><span>VIEW BASKET<img src="<?php bloginfo('template_url'); ?>/images/basket.png" alt="Basket Icon"></span></a></div>
+                    <div id="search">
+                        <img class="search-icon" src="<?php bloginfo('template_url'); ?>/images/search.svg" alt="Search Icon">
+                        <?php get_search_form(); ?>
+                    </div>
+                </span>
+            </div>
+            <div class="menu-bottom">
+                <?php
+                    wp_nav_menu( array( 
+                        'theme_location' => 'main-menu',
+                        'after'           => '<button class="dropdown-btn"></button>', 
+                        'container_class' => 'main-menu' ) ); 
+                ?>
             </div>
         </div>
     </div>
