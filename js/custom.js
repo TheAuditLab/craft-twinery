@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
         $(this).toggleClass("active");
     });
 
-    jQuery(".product-spec .prive").insertAfter("table");
+    jQuery(".ex-vat").insertAfter(".home .woocommerce-Price-amount");
 
     $(window).resize(function(){
         if(screen.width >= 700){
@@ -88,22 +88,6 @@ jQuery(document).ready(function($) {
         }
     }
 
-    //Loader animation in view
-        // Check if it's time to start the animation.
-
-    var width = $("body").width();
-    console.log(window.pageYOffset);
-    function checkAnimation() {
-        $.fn.isInViewport = function() {
-            var elementTop = $(this).offset().top;
-            var elementBottom = elementTop + $(this).outerHeight();
-        
-            var viewportTop = $(window).scrollTop();
-            var viewportBottom = viewportTop + $(window).height();
-        
-            return elementBottom > viewportTop && elementTop < viewportBottom;
-        };
-    }
     // loading when the page comes in the view
     $(window).scroll(function() {
         var $lWrap = $('.l-wrap');

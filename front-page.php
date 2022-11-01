@@ -5,6 +5,7 @@
     include "template-blocks/hero-slider.php";
     include "template-blocks/two-section.php";
     include "template-blocks/three-section.php";
+    include "template-blocks/products-section.php";
 ?>
 
 <?php get_footer(); ?>

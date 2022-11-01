@@ -222,3 +222,40 @@ function mytheme_custom_excerpt_length( $length ) {
   return 15;
 }
 add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
+
+// removing add to cart when not on shop page
+add_action( 'wp', 'remove_add_to_cart' );
+
+function remove_add_to_cart(){
+	if( !is_shop() ) {
+		remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+
+    // Second, add View Product Button
+
+    add_action( 'woocommerce_after_shop_loop_item', 'shop_view_product_button', 10);
+    function shop_view_product_button() {
+      global $product;
+      $link = $product->get_permalink();
+      echo '<a href="' . $link . '" class="button addtocartbutton">View More</a>';
+    }
+	}
+}
+
+
+// removing breadcrumbs
+
+add_action( 'init', 'my_remove_breadcrumbs' );
+ 
+function my_remove_breadcrumbs() {
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+}
+
+// adding excl tax to price
+if( !is_shop() ) {
+  add_filter( 'woocommerce_get_price_suffix', 'bbloomer_add_price_suffix_price_inc_tax', 99, 4 );
+    
+  function bbloomer_add_price_suffix_price_inc_tax( $suffix, $product, $price, $qty ){
+    $suffix = ' <small>ex. vat</small>';
+    return $suffix;
+  }
+}
