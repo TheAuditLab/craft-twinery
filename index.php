@@ -1,12 +1,5 @@
 <?php
 get_header();
-if ( have_posts() )  {
-    echo    '<div class="news-header">
-                <div class="container"> 
-                    <h1>Latest News</h1>
-                </div>
-            </div>';
-}
 echo '<div class="container">';
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 get_template_part( 'entry' );

@@ -14,10 +14,6 @@ if ( !is_singular() || !$price)
 if ( !is_singular() || $price)
     include 'header-div.php';
 ?>
-<?php 
-if ( is_singular() && $price )
-    include "security-product.php";
-?>
 <?php edit_post_link(); ?>
 </header>
 <?php if ( !is_search() && is_singular()) { get_template_part( 'entry', ( is_front_page() || is_home() || is_front_page() && is_home() || is_archive() || is_search() || is_singular() ? 'summary' : 'content' ) ); } ?>

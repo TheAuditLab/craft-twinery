@@ -85,5 +85,9 @@
     </div>
 </div>
 
+<?php if(is_shop() ) {
+    include "shop-header.php";  
+}
+?>
 
 <main id="content" role="main">

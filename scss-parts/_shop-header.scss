@@ -1,0 +1,11 @@
+#shop-header {
+    width: 100%;
+    object-fit: cover;
+    min-height: 500px;
+    margin-bottom: 50px;
+    display: flex;
+    place-items: center;
+    .container {
+        color: #ffffff;
+    }
+}
