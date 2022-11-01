@@ -1,9 +1,11 @@
 // --- Header Navigation 
 #header{
+    display: flex;
+    justify-content: center;
     .container {
         display: flex;
         max-width: 1220px !important;
-        position: relative;
+        position: absolute;
         z-index: 2;
         background-color: #ffffff;
         margin-top: 50px;

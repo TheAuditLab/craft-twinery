@@ -18,9 +18,10 @@
 
 #homepageHeroSlider{
     color: #ffffff;
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%;
+    margin-bottom: 60px;
 
     .circle {
         display: flex;

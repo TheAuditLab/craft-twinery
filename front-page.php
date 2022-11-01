@@ -2,7 +2,8 @@
 
 <?php get_header(); ?>
 <?php   
-    include "template-blocks/hero-slider.php"; 
+    include "template-blocks/hero-slider.php";
+    include "template-blocks/two-section.php";
 ?>
 
 <?php get_footer(); ?>

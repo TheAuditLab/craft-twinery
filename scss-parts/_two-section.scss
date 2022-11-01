@@ -1,0 +1,47 @@
+#two-section {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+        }
+        .text-div {
+            width: 55%;
+            padding: 30px;
+            background: var(--purple);
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+            p {
+                margin-top: 30px;
+            }
+            &:after {
+                width: 46px;
+                height:46px;
+                content: url("images/illustration.png");
+                transform: scale(.5);
+                right: 300px;
+                top: -100px;
+                position: absolute;
+            }
+            h2, p {
+                position: relative;
+                z-index: 1;
+            }
+        }
+        .img-div {
+            width: 40%;
+            
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+
+                @media screen and (min-width: 1200px) {
+                    max-height: 330px;
+                }
+            }
+        }
+    }
+}
