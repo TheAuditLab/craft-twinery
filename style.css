@@ -20,6 +20,7 @@ Text Domain: generic
   --blue: #4fabaf;
   --orange: #f3bd38;
   --grey: #efeff1;
+  --green: #c8d454;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -3697,5 +3698,125 @@ h5 {
   #two-section .container .img-div img {
     max-height: 330px;
   }
+}
+
+#three-section {
+  padding: 50px 0;
+}
+
+#three-section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  #three-section .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+#three-section .container .three-section-div {
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+#three-section .container .three-section-div h2, #three-section .container .three-section-div a {
+  position: relative;
+  z-index: 1;
+}
+
+#three-section .container .three-section-div h2 {
+  text-align: left;
+  max-width: 50%;
+}
+
+#three-section .container .three-section-div a {
+  padding: 10px 25px;
+  font-size: 14px;
+  display: inline-block;
+  margin: 60px 0 10px;
+}
+
+#three-section .container .three-section-div:nth-child(1) {
+  background: var(--green);
+}
+
+#three-section .container .three-section-div:nth-child(1) a {
+  background: var(--orange);
+  color: #ffffff;
+}
+
+#three-section .container .three-section-div:nth-child(1):after {
+  width: 46px;
+  height: 46px;
+  content: url("images/illustration1.png");
+  left: -80px;
+  bottom: 130px;
+  position: absolute;
+}
+
+#three-section .container .three-section-div:nth-child(2) {
+  background: var(--blue);
+}
+
+#three-section .container .three-section-div:nth-child(2) a {
+  background: var(--grey);
+}
+
+#three-section .container .three-section-div:nth-child(2) h2 {
+  color: #ffffff;
+}
+
+#three-section .container .three-section-div:nth-child(2):after {
+  width: 46px;
+  height: 46px;
+  content: url(images/illustration2.png);
+  right: 300px;
+  bottom: 270px;
+  position: absolute;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+#three-section .container .three-section-div:nth-child(3) {
+  background: var(--orange);
+}
+
+#three-section .container .three-section-div:nth-child(3) a {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+#three-section .container .three-section-div:nth-child(3):after {
+  width: 46px;
+  height: 46px;
+  content: url(images/illustration3.png);
+  right: 150px;
+  bottom: 170px;
+  position: absolute;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
 }
 /*# sourceMappingURL=style.css.map */
