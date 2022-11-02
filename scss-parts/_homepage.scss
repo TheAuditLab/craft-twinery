@@ -42,11 +42,11 @@
         p {
             margin: 0;
         }
-        span {
+        h2 {
             font-size: 60px;
             font-weight: 800;
-            bottom: 10px;
             position: relative;
+            font-family: "Poppins", Arial, Helvetica, sans-serif !important;
         }
         @media screen and (min-width: 768px) {
             right: 10px;
