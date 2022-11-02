@@ -6,6 +6,7 @@
     include "template-blocks/two-section.php";
     include "template-blocks/three-section.php";
     include "template-blocks/products-section.php";
+    include "template-blocks/text-section.php";
 ?>
 
 <?php get_footer(); ?>
