@@ -3862,12 +3862,18 @@ h5 {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  min-height: 500px;
+  min-height: 200px;
   margin-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   place-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  #shop-header {
+    min-height: 500px;
+  }
 }
 
 #shop-header .container {

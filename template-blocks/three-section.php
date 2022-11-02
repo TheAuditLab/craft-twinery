@@ -15,15 +15,15 @@
     <div class="container">
         <div class="three-section-div">
             <h2><?php echo $three_section_title_1; ?></h2>
-            <a href="<?php $three_section_link_1 ?> "><div>SHOP NOW</div></a>
+            <a href="<?php echo $three_section_link_1 ?> "><div>SHOP NOW</div></a>
         </div>
         <div class="three-section-div">
             <h2><?php echo $three_section_title_2; ?></h2>
-            <a href="<?php $three_section_link_2 ?> "><div>SHOP NOW</div></a>
+            <a href="<?php echo $three_section_link_2 ?> "><div>SHOP NOW</div></a>
         </div>
         <div class="three-section-div">
             <h2><?php echo $three_section_title_3; ?></h2>
-            <a href="<?php $three_section_link_3 ?> "><div>SHOP NOW</div></a>
+            <a href="<?php echo $three_section_link_3 ?> "><div>SHOP NOW</div></a>
         </div>
     </div>
 </section>
