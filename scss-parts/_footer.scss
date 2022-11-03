@@ -29,6 +29,11 @@
                 }
             }
             font-weight: bold;
+            .logo-div {
+                @media screen and (min-width:768px) {
+                    width: 30%;
+                }
+            }
         }
     }
 }
