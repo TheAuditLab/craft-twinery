@@ -16,6 +16,24 @@
             </div>
         </div>
     </div>
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="menu"><p><strong class="title">STORE INFORMATION</strong>
+                <?php
+                        wp_nav_menu( array( 
+                            'theme_location' => 'main-footer-menu', 
+                            'container_class' => 'main-footer-menu' ) ); 
+                ?>
+            </div>
+            <div class="copyright">
+                <p>2022 © Rope Source Limited, Registered Company Number <br>08441149 - Website built by The Audit Lab</p>
+                <div class="image">
+                    <img class="near" src="<?php bloginfo('template_url'); ?>/images/near.png" alt="Near logo">
+                    <img class="cards" src="<?php bloginfo('template_url'); ?>/images/cards.png" alt="Card Options">
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 </body>
 </html>

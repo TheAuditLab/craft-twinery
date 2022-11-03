@@ -161,7 +161,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: 10px 0;
-  font-family: "AlbertSans-Regular", Arial, Helvetica, sans-serif;
 }
 
 ul li {
@@ -175,10 +174,6 @@ ol li {
   margin-top: 10px;
 }
 
-b {
-  font-family: "AlbertSans-Bold", Arial, Helvetica, sans-serif;
-}
-
 a {
   text-decoration: none;
   color: unset;
@@ -190,11 +185,6 @@ a:hover {
 
 .overflow {
   overflow: hidden;
-}
-
-.wpcf7-submit {
-  font-family: "AlbertSans-Bold", Arial, Helvetica, sans-serif;
-  max-width: 380px;
 }
 
 .wpcf7-select {
@@ -244,7 +234,6 @@ a:hover, a:focus {
 
 strong {
   font-weight: bold;
-  font-family: "AlbertSans-Bold", Arial, Helvetica, sans-serif !important;
 }
 
 em {
@@ -1102,7 +1091,6 @@ body {
 .enquiry-form .wpcf7-submit {
   background: #000000;
   width: 100%;
-  font-family: "AlbertSans-Bold", Arial, Helvetica, sans-serif;
   line-height: 1;
 }
 
@@ -1125,7 +1113,6 @@ body {
   padding: 20px;
   font-size: 30px;
   color: #ffffff;
-  font-family: "AlbertSans-Bold", Arial, Helvetica, sans-serif;
   border-bottom: 1px solid var(--green);
   position: relative;
   z-index: 11;
@@ -1160,7 +1147,6 @@ body {
 .info-text h3 {
   font-size: 30px;
   line-height: 1;
-  font-family: "AlbertSans-Bold", Arial, Helvetica, sans-serif;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1262,10 +1248,6 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   z-index: 10;
   padding: 100px 0;
   max-width: 70%;
-}
-
-.nav-links a {
-  font-family: "AlbertSans-ExtraBold", Arial, Helvetica, sans-serif;
 }
 
 .hover-effect {
@@ -1775,7 +1757,6 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   margin-bottom: 45px;
   font-size: 35px;
   line-height: 1;
-  font-family: "AlbertSans-Bold", Arial, Helvetica, sans-serif !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -2318,7 +2299,6 @@ h5 {
 
 #header .logo-header .logo-div .contact-div a {
   text-align: end;
-  font-family: "AlbertSans-ExtraBold", Arial, Helvetica, sans-serif !important;
   font-size: 20px;
 }
 
@@ -2558,8 +2538,12 @@ h5 {
   }
 }
 
+#footer {
+  margin-top: 30px;
+}
+
 #footer .container {
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 #footer .container .top-footer {
@@ -2609,6 +2593,66 @@ h5 {
   #footer .container .top-footer .logo-div {
     width: 30%;
   }
+}
+
+#footer .bottom-footer {
+  width: 100%;
+  background: var(--grey);
+}
+
+#footer .bottom-footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  #footer .bottom-footer .menu {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #footer .bottom-footer .copyright {
+    width: 50%;
+  }
+}
+
+#footer .bottom-footer .copyright .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  max-width: 500px;
+}
+
+#footer .bottom-footer .copyright .image .near {
+  width: 110px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#footer .bottom-footer .copyright .image .cards {
+  width: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#footer .bottom-footer li {
+  list-style: none;
+  margin-bottom: 3px;
+}
+
+#footer .bottom-footer li::before {
+  content: '>';
+  padding-right: 6px;
+}
+
+#footer .bottom-footer ul {
+  margin-top: 20px;
 }
 
 .search-results #content {
@@ -2789,7 +2833,6 @@ h5 {
 }
 
 #contact-page .contact-icon-div .contact-icon p {
-  font-family: "AlbertSans-Bold", Arial, Helvetica, sans-serif !important;
   font-size: 22px;
 }
 
@@ -2993,7 +3036,6 @@ h5 {
 
 #contact-page .contact-form-div .contact-form .wpcf7-submit {
   background: #000000;
-  font-family: "AlbertSans-Bold", Arial, Helvetica, sans-serif;
   line-height: 1;
 }
 
