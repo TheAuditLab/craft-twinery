@@ -1,11 +1,13 @@
 #account-block {
     .container {
-        padding: 100px 0;
+        padding: 30px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         @media screen and (min-width: 768px) {
             flex-direction: row;
+            padding: 100px 0 30px 0;
+
         }
         h2 {
             text-align: center;
@@ -13,13 +15,18 @@
         }
     }
     .account-div, .cart-div {
-        width: 45%;
+        width: 100%;
         border: 3px solid var(--orange);
         padding: 25px;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-bottom: 30px;
+        @media screen and (min-width: 768px) {
+            width: 45%;
+
+        }
         p {
             font-size: 20px;
         }

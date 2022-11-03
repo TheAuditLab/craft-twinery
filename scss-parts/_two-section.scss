@@ -7,12 +7,15 @@
             flex-direction: row;
         }
         .text-div {
-            width: 60%;
+            width: 100%;
             padding: 30px;
             background: var(--purple);
             color: #ffffff;
             overflow: hidden;
             position: relative;
+            @media screen and (min-width: 768px) {
+                width: 60%;
+            }
             p {
                 margin-top: 30px;
             }
@@ -31,13 +34,19 @@
             }
         }
         .img-div {
-            width: 35%;
-            
+            width: 100%;
+            max-height: 400px;
+            @media screen and (min-width: 768px) {
+                width: 35%;
+            }
             img {
                 width: 100%;
                 object-fit: cover;
                 height: 100%;
-
+                max-height: 300px;
+                @media screen and (min-width: 768px) {
+                    max-width: unset;
+                }
                 @media screen and (min-width: 1200px) {
                     max-height: 330px;
                 }

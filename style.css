@@ -1345,7 +1345,13 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   position: relative;
   top: 0;
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  #homepageHeroSlider {
+    margin-bottom: 60px;
+  }
 }
 
 #homepageHeroSlider .circle {
@@ -1436,7 +1442,7 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 0, 0.2);
-  height: 85vh;
+  min-height: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1960,14 +1966,22 @@ h5 {
 }
 
 #header .container {
+  position: fixed;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   max-width: 1220px !important;
-  position: absolute;
   z-index: 2;
   background-color: #ffffff;
   margin-top: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  #header .container {
+    position: absolute;
+    top: unset;
+  }
 }
 
 #header .container .header-info {
@@ -2479,6 +2493,13 @@ h5 {
 
 #header .menu-header {
   width: 70%;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  #header .menu-header {
+    display: block;
+  }
 }
 
 #header .header-info {
@@ -2540,6 +2561,13 @@ h5 {
 
 #footer {
   margin-top: 30px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  #footer {
+    text-align: unset;
+  }
 }
 
 #footer .container {
@@ -2550,7 +2578,20 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  #footer .container .top-footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 #footer .container .top-footer .footer-logo {
@@ -2604,6 +2645,19 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  #footer .bottom-footer .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -3121,12 +3175,18 @@ h5 {
 }
 
 #two-section .container .text-div {
-  width: 60%;
+  width: 100%;
   padding: 30px;
   background: var(--purple);
   color: #ffffff;
   overflow: hidden;
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  #two-section .container .text-div {
+    width: 60%;
+  }
 }
 
 #two-section .container .text-div p {
@@ -3150,7 +3210,14 @@ h5 {
 }
 
 #two-section .container .img-div {
-  width: 35%;
+  width: 100%;
+  max-height: 400px;
+}
+
+@media screen and (min-width: 768px) {
+  #two-section .container .img-div {
+    width: 35%;
+  }
 }
 
 #two-section .container .img-div img {
@@ -3158,6 +3225,13 @@ h5 {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+  max-height: 300px;
+}
+
+@media screen and (min-width: 768px) {
+  #two-section .container .img-div img {
+    max-width: unset;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -3167,7 +3241,13 @@ h5 {
 }
 
 #three-section {
-  padding: 50px 0;
+  padding: 30px 0;
+}
+
+@media screen and (min-width: 768px) {
+  #three-section {
+    padding: 50px 0;
+  }
 }
 
 #three-section .container {
@@ -3193,7 +3273,7 @@ h5 {
 }
 
 #three-section .container .three-section-div {
-  width: 30%;
+  width: 100%;
   padding: 20px;
   text-align: center;
   display: -webkit-box;
@@ -3206,6 +3286,13 @@ h5 {
   display: inline-block;
   position: relative;
   overflow: hidden;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  #three-section .container .three-section-div {
+    width: 30%;
+  }
 }
 
 #three-section .container .three-section-div h2, #three-section .container .three-section-div a {
@@ -3223,6 +3310,12 @@ h5 {
   font-size: 14px;
   display: inline-block;
   margin: 60px 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+  #three-section .container .three-section-div a {
+    font-size: 18px;
+  }
 }
 
 #three-section .container .three-section-div:nth-child(1) {
@@ -3288,7 +3381,13 @@ h5 {
 
 #products-section .title {
   text-align: center;
-  margin: 75px 0;
+  margin: 30px 0;
+}
+
+@media screen and (min-width: 768px) {
+  #products-section .title {
+    margin: 75px 0;
+  }
 }
 
 #products-section .button {
@@ -3385,7 +3484,7 @@ h5 {
 }
 
 #account-block .container {
-  padding: 100px 0;
+  padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3404,6 +3503,7 @@ h5 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 100px 0 30px 0;
   }
 }
 
@@ -3413,7 +3513,7 @@ h5 {
 }
 
 #account-block .account-div, #account-block .cart-div {
-  width: 45%;
+  width: 100%;
   border: 3px solid var(--orange);
   padding: 25px;
   text-align: center;
@@ -3427,6 +3527,13 @@ h5 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  #account-block .account-div, #account-block .cart-div {
+    width: 45%;
+  }
 }
 
 #account-block .account-div p, #account-block .cart-div p {
