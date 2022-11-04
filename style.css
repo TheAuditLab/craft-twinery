@@ -1357,6 +1357,17 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   letter-spacing: 1px;
 }
 
+.page-template-search-page label {
+  width: 100%;
+}
+
+.page-template-search-page input {
+  width: 100%;
+  max-width: 600px;
+  background: unset;
+  border: 1px solid;
+}
+
 .slide-link {
   text-transform: uppercase;
   color: #ffffff;
@@ -2698,6 +2709,11 @@ h5 {
   background: var(--grey);
 }
 
+.page-template-contact_us #footer .bottom-footer {
+  background: var(--purple);
+  color: #ffffff;
+}
+
 #footer .bottom-footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2908,6 +2924,16 @@ h5 {
   margin: 40px 0 30px 0;
 }
 
+#contact-page .container {
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 #contact-page .hero-image {
   position: relative;
   color: #ffffff;
@@ -2918,25 +2944,8 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
   z-index: 2;
-}
-
-#contact-page .hero-image:after {
-  content: '';
-  position: absolute;
-  background: var(--blue);
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.85;
 }
 
 #contact-page .contact-text {
@@ -3257,6 +3266,88 @@ h5 {
   border: 1px solid;
   padding: 30px;
   max-width: 170px;
+}
+
+#contact-page .three-section-div {
+  width: 30%;
+  padding: 20px;
+  border: 2px solid;
+}
+
+#contact-page .three-section-div h2 {
+  padding-bottom: 10px;
+}
+
+#contact-page .three-section-div .text {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#contact-page .form-title {
+  font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  #contact-page .form-title {
+    font-size: 60px;
+    max-width: 220px;
+  }
+}
+
+#contact-page .form-section {
+  background: #f6f6f6;
+  position: relative;
+  overflow: hidden;
+}
+
+#contact-page .form-section:after {
+  content: url("images/illustration5.png");
+  left: -170px;
+  bottom: -100px;
+  position: absolute;
+  max-width: 50px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+#contact-page .form-section .form {
+  width: 70%;
+}
+
+#contact-page .form-section .form textarea {
+  width: 100%;
+}
+
+#contact-page .form-section textarea {
+  border: 1px solid;
+  resize: none;
+}
+
+#contact-page .form-section input {
+  border: 1px solid;
+  height: 60px;
+}
+
+#contact-page .form-section .half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact-page .form-section .half p:first-of-type {
+  width: 50%;
+}
+
+#contact-page .form-section .half p:nth-of-type(2) {
+  width: 50%;
+  margin: 0;
+}
+
+#contact-page .form-section .wpcf7-submit {
+  background: #000000;
+  text-transform: uppercase;
+  padding: 20px 50px;
+  letter-spacing: 1px;
 }
 
 #two-section .container {

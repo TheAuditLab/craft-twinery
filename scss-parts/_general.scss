@@ -556,3 +556,14 @@ form .wpcf7-select {
     font-size: 14px;
     letter-spacing: 1px;
 }
+.page-template-search-page {
+    label {
+        width: 100%;
+    }
+    input {
+        width: 100%;
+        max-width: 600px;
+        background: unset;
+        border: 1px solid ;
+    }
+}

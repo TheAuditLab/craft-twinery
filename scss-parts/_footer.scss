@@ -57,6 +57,10 @@
     .bottom-footer {
         width: 100%;
         background: var(--grey);
+        .page-template-contact_us & {
+            background: var(--purple);
+            color: #ffffff;
+        }
         .container {
             display: flex;
             flex-direction: column;
