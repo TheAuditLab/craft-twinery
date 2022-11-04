@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 Theme Name: Craft Twinery theme
-Author: The Audit Lab
+Author: Dami Sadiq
 Author URI: https://theauditlab.com/
 Description: Craft Twinery theme
 Tags: accessibility-ready, one-column, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready, blog, e-commerce, portfolio
@@ -1316,13 +1316,13 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   font-size: 18px !important;
 }
 
-.woocommerce-cart #content, .woocommerce-page #content {
+.woocommerce-cart #content, .woocommerce-page #content, .search-results #content {
   padding: 50px 0;
 }
 
 @media screen and (min-width: 768px) {
-  .woocommerce-cart #content, .woocommerce-page #content {
-    padding: 250px 0;
+  .woocommerce-cart #content, .woocommerce-page #content, .search-results #content {
+    padding: 250px 0 !important;
   }
 }
 
@@ -1332,6 +1332,29 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
 
 #text_page h2 {
   margin-bottom: 50px;
+}
+
+#search_page .container {
+  padding: 50px 0;
+}
+
+#search_page h2 {
+  margin-bottom: 50px;
+}
+
+#coupon_code {
+  width: 100% !important;
+}
+
+.button {
+  background: var(--blue);
+  text-transform: uppercase;
+  border-radius: 0;
+  color: #ffffff;
+  padding: 15px 35px;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 .slide-link {
@@ -2775,6 +2798,11 @@ h5 {
   }
 }
 
+.search-results h2 {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
 .search-results .header {
   width: 100%;
 }
@@ -2841,6 +2869,43 @@ h5 {
 .search-results .title-div h2 {
   font-size: 24px;
   margin: 10px 0;
+}
+
+.search-results .search-div {
+  width: 50%;
+  padding: 20px 0;
+}
+
+.search-results .search-div li {
+  list-style: none;
+  border: 2px solid;
+  padding: 20px;
+  height: 100%;
+  max-width: 90%;
+}
+
+.search-results .search-div span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-results .search-div .image-div {
+  width: 30%;
+}
+
+.search-results .search-div .text-div {
+  width: 70%;
+  margin-left: 20px;
+}
+
+.search-results .search-div .text-div p {
+  font-size: 14px;
+}
+
+.search-results .search-div .buttons {
+  width: 100%;
+  margin: 40px 0 30px 0;
 }
 
 #contact-page .hero-image {

@@ -259,3 +259,16 @@ if( !is_shop() ) {
     return $suffix;
   }
 }
+
+// search page
+add_filter( 'pre_get_posts', 'search_by_product_only' );
+
+function search_by_product_only( $query ) {
+
+    // check if search query only
+    if ( $query->is_search ) {
+        $query->set( 'post_type', array( 'product') ); // here you can add multiple post types in whcih you want to search
+    }
+
+    return $query;
+}

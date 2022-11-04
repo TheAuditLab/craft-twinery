@@ -1,6 +1,6 @@
 /*
 Theme Name: Craft Twinery theme
-Author: The Audit Lab
+Author: Dami Sadiq
 Author URI: https://theauditlab.com/
 Description: Craft Twinery theme
 Tags: accessibility-ready, one-column, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready, blog, e-commerce, portfolio
@@ -512,11 +512,11 @@ form .wpcf7-select {
     font-size: 18px !important;
 }
 
-.woocommerce-cart, .woocommerce-page {
+.woocommerce-cart, .woocommerce-page, .search-results {
     #content {
         padding: 50px 0;
         @media screen and (min-width: 768px) {
-            padding: 250px 0;
+            padding: 250px 0 !important;
         }
     }
 }
@@ -529,4 +529,30 @@ form .wpcf7-select {
    h2 {
        margin-bottom: 50px;
    }
+}
+
+#search_page {
+    .container {
+        padding: 50px 0;
+    }
+    h2 {
+        margin-bottom: 50px;
+    }
+ }
+
+
+ // coupon
+ #coupon_code {
+     width: 100% !important;
+ }
+
+ .button {
+    background: var(--blue);
+    text-transform: uppercase;
+    border-radius: 0;
+    color: #ffffff;
+    padding: 15px 35px;
+    font-weight: 100;
+    font-size: 14px;
+    letter-spacing: 1px;
 }

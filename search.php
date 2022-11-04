@@ -1,23 +1,43 @@
 <?php get_header(); ?>
-<?php if ( have_posts() ) : ?>
-<header class="header">
-<h1 class="entry-title" itemprop="name"><?php printf( esc_html__( 'Search Results for: %s', 'generic' ), get_search_query() ); ?></h1>
-</header>
-<?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php endwhile; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
-<?php else : ?>
-<div class="container">
-<article id="post-0" class="post no-results not-found">
-<header class="header">
-<h1 class="entry-title" itemprop="name"><?php esc_html_e( 'Nothing Found', 'generic' ); ?></h1>
-</header>
-<div class="entry-content" itemprop="mainContentOfPage">
-<p><?php esc_html_e( 'Sorry, nothing matched your search. Please try again.', 'generic' ); ?></p>
-<?php get_search_form(); ?>
-</div>
-</article>
-</div>
-<?php endif; ?>
+<?php
+
+    $s=get_search_query();
+    $args = array(
+                    's' =>$s
+                );
+        // The Query
+    $the_query = new WP_Query( $args );
+    if ( $the_query->have_posts() ) {
+        _e("<h2 style='font-weight:bold;color:#000'>Search Results for: ".get_query_var('s')."</h2>");
+        while ( $the_query->have_posts() ) {
+            $the_query->the_post();
+                    ?>
+                        <div class="search-div">
+                            <li>
+                                <span>
+                                    <div class="image-div">   
+                                        <?php echo get_the_post_thumbnail(); ?>
+                                    </div>
+                                    <div class="text-div">
+                                        <h3><?php the_title(); ?></h3>
+                                        <?php the_excerpt(); ?>
+                                        <div class="buttons">
+                                            <a href="<?php the_permalink(); ?>" class="button">View Details</a>
+                                        </div>
+                                    </div>
+                                </span>
+                            </li>
+                        </div>
+                    <?php
+        }
+    }else{
+    ?>
+    <div class="container">
+        <h2 style='font-weight:bold;color:#000'>Nothing Found</h2>
+        <div class="alert alert-info">
+            <p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
+        </div>
+    </div>
+<?php } ?>
+
 <?php get_footer(); ?>
