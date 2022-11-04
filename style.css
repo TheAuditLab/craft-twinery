@@ -1319,6 +1319,16 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   font-size: 18px !important;
 }
 
+.woocommerce-cart #content, .woocommerce-page #content {
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .woocommerce-cart #content, .woocommerce-page #content {
+    padding: 250px 0;
+  }
+}
+
 .slide-link {
   text-transform: uppercase;
   color: #ffffff;
@@ -2600,6 +2610,13 @@ h5 {
 
 #footer .container .top-footer .social-icons {
   padding: 0 30px;
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 768px) {
+  #footer .container .top-footer .social-icons {
+    margin: unset;
+  }
 }
 
 #footer .container .top-footer .social-icons img {
@@ -2617,6 +2634,18 @@ h5 {
       -ms-flex-direction: row;
           flex-direction: row;
   font-size: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  #footer .container .top-footer .contact {
+    margin-top: unset;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 #footer .container .top-footer .contact img {
@@ -2676,11 +2705,19 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin-top: 30px;
   max-width: 500px;
+}
+
+@media screen and (min-width: 768px) {
+  #footer .bottom-footer .copyright .image {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 #footer .bottom-footer .copyright .image .near {
