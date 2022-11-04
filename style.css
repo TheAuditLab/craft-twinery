@@ -1172,7 +1172,7 @@ body {
 .hero-image {
   background-size: cover;
   background-position: center;
-  height: 150px;
+  height: 300px;
   position: relative;
   color: #ffffff;
   z-index: 1;
@@ -1181,7 +1181,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .hero-image {
-    height: 300px;
+    min-height: 450px;
   }
 }
 
@@ -1190,9 +1190,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1200,15 +1197,15 @@ body {
   z-index: 2;
 }
 
-.hero-image:after {
-  content: '';
-  position: absolute;
-  background: var(--blue);
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.85;
+.hero-image .container .title {
+  max-width: 400px;
+  padding-top: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-image .container .title {
+    padding-top: 150px;
+  }
 }
 
 form .wpcf7-select {
@@ -1327,6 +1324,14 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   .woocommerce-cart #content, .woocommerce-page #content {
     padding: 250px 0;
   }
+}
+
+#text_page .text-content {
+  padding: 50px 0;
+}
+
+#text_page h2 {
+  margin-bottom: 50px;
 }
 
 .slide-link {
