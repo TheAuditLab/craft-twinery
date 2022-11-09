@@ -11,6 +11,7 @@ jQuery(document).ready(function($) {
     $(".mobile-menu").click(function(){
         $(this).toggleClass("active");
         $("#menu-main-menu").toggleClass("active");
+        $(".menu-header").toggle();
         $("body").toggleClass("overflow");
     });
 

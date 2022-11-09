@@ -1992,7 +1992,7 @@ h5 {
 }
 
 .hero-title {
-  font-size: 60px;
+  font-size: 50px;
 }
 
 @media screen and (min-width: 768px) {
@@ -2023,13 +2023,13 @@ h5 {
   max-width: 1220px !important;
   z-index: 2;
   background-color: #ffffff;
-  margin-top: 50px;
 }
 
 @media screen and (min-width: 768px) {
   #header .container {
     position: absolute;
     top: unset;
+    margin-top: 50px;
   }
 }
 
@@ -2083,14 +2083,49 @@ h5 {
 }
 
 #header .menu-item {
-  font-size: 13px;
-  padding: 20px 20px 20px 0;
+  font-size: 20px;
+  padding: 10px 0 0 0;
   text-transform: uppercase;
   z-index: 2;
 }
 
+@media screen and (min-width: 768px) {
+  #header .menu-item {
+    font-size: 13px;
+    padding: 20px 20px 20px 0;
+  }
+}
+
 #header .menu-item a {
   display: inline;
+}
+
+#header .menu-item-has-children > .dropdown-btn {
+  position: absolute;
+  content: '';
+  border-left: solid 8px #ffffff;
+  border-bottom: solid 8px transparent;
+  border-top: solid 8px transparent;
+  right: 10px;
+  top: 20px;
+  opacity: 0.8;
+  border-right: 0;
+  background: unset;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@media screen and (min-width: 768px) {
+  #header .menu-item-has-children > .dropdown-btn {
+    top: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #header .menu-item-has-children > .dropdown-btn {
+    display: none;
+    top: 14px;
+  }
 }
 
 #header .sub-menu.active {
@@ -2244,7 +2279,13 @@ h5 {
 }
 
 #header .logo-header {
-  width: 30%;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #header .logo-header {
+    width: 30%;
+  }
 }
 
 #header .logo-header .header-logo {
@@ -2272,15 +2313,24 @@ h5 {
   background: #ffffff;
   position: relative;
   z-index: 9;
-  height: 100%;
+  height: 70px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  #header .logo-header .logo-div {
+    height: 100%;
+  }
+}
+
 .overflow #header .logo-header .logo-div {
   position: fixed;
   top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: 0 30px;
 }
 
 #header .logo-header .logo-div .mobile-menu {
@@ -2294,7 +2344,7 @@ h5 {
 
 #header .logo-header .logo-div .mobile-menu .line {
   height: 3px;
-  background: var(--dark-blue);
+  background: #000000;
   width: 40px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2398,7 +2448,7 @@ h5 {
   left: 0;
   top: 0;
   z-index: 9876;
-  padding: 150px 20px;
+  padding: 90px 20px;
   overflow-y: scroll;
 }
 
@@ -2559,20 +2609,27 @@ h5 {
   position: relative;
 }
 
-#header .menu-item-has-children:after {
-  content: '▾';
-  position: absolute;
-  font-size: 17px;
-  top: 16px;
-  right: 18px;
-  cursor: pointer;
+@media screen and (min-width: 768px) {
+  #header .menu-item-has-children:after {
+    content: '▾';
+    position: absolute;
+    font-size: 17px;
+    top: 16px;
+    right: 18px;
+    cursor: pointer;
+  }
 }
 
 #header .menu-item-has-children .sub-menu {
-  position: absolute;
   z-index: 92;
   width: 100%;
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  #header .menu-item-has-children .sub-menu {
+    position: absolute;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -2668,10 +2725,10 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -2684,6 +2741,10 @@ h5 {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
