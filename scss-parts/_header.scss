@@ -16,6 +16,9 @@
             top: unset;
             margin-top: 50px;
         }
+        a {
+            color: #000000;
+        }
         .header-info {
             display: none;
             .overflow & {
@@ -320,7 +323,7 @@
         &.active {
             display: block;
             width: 100%;
-            background: var(--blue);
+            background: var(--purple);
             height: 100vh;
             position: fixed;
             left: 0;

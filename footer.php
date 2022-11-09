@@ -1,5 +1,8 @@
 </main>
 <?php get_sidebar(); ?>
+<?php if (is_product()) {  
+    include "template-blocks/account-block.php"; 
+} ?>
 <footer id="footer">
     <div class="container">
         <div class="top-footer">

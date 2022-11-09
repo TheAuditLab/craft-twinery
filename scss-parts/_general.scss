@@ -42,9 +42,9 @@ ol li {
 
 a {
     text-decoration: none;
-    color: unset;
+    color: purple;
     &:hover {
-        color: var(--green);
+        color: var(--purple);
     }
 }
 .overflow {
@@ -512,12 +512,27 @@ form .wpcf7-select {
     font-size: 18px !important;
 }
 
-.woocommerce-cart, .search-results {
+.woocommerce-cart, .archive, .woocommerce-account {
     #content {
         padding: 50px 0;
         @media screen and (min-width: 768px) {
             padding: 250px 0 !important;
         }
+    }
+}
+
+.search-results {
+    #content {
+        padding: 50px 0 !important;
+    }
+}
+
+.woocommerce {
+   ul a {
+        color: #000000;
+    }
+    .wc-proceed-to-checkout a {
+        background-color: var(--purple) !important;
     }
 }
 
@@ -528,6 +543,9 @@ form .wpcf7-select {
    }
    h2 {
        margin-bottom: 50px;
+   }
+   p {
+    padding-bottom: 15px;
    }
 }
 
