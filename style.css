@@ -1316,12 +1316,12 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   font-size: 18px !important;
 }
 
-.woocommerce-cart #content, .woocommerce-page #content, .search-results #content {
+.woocommerce-cart #content, .search-results #content {
   padding: 50px 0;
 }
 
 @media screen and (min-width: 768px) {
-  .woocommerce-cart #content, .woocommerce-page #content, .search-results #content {
+  .woocommerce-cart #content, .search-results #content {
     padding: 250px 0 !important;
   }
 }
@@ -2012,6 +2012,8 @@ h5 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  z-index: 99;
 }
 
 #header .container {
@@ -2607,6 +2609,7 @@ h5 {
 
 #header .menu-item-has-children {
   position: relative;
+  padding-right: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -2677,7 +2680,7 @@ h5 {
 }
 
 #footer .container {
-  padding: 30px 0;
+  padding: 30px;
 }
 
 #footer .container .top-footer {
@@ -2986,13 +2989,29 @@ h5 {
 }
 
 #contact-page .container {
-  padding: 100px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 60px 30px;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+  #contact-page .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 70px 0;
+  }
 }
 
 #contact-page .hero-image {
@@ -3163,6 +3182,9 @@ h5 {
     text-align: left;
     width: 50%;
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
   #contact-page .contact-form-div .contact-form .half {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3174,6 +3196,9 @@ h5 {
             justify-content: space-between;
     margin: 0 auto;
   }
+}
+
+@media screen and (min-width: 768px) {
   #contact-page .contact-form-div .contact-form .half .wpcf7-form-control-wrap {
     width: 50%;
   }
@@ -3330,9 +3355,20 @@ h5 {
 }
 
 #contact-page .three-section-div {
-  width: 30%;
+  width: 100%;
   padding: 20px;
-  border: 2px solid;
+  border: 2px solid var(--orange);
+  margin: 15px 0;
+  min-height: 240px;
+}
+
+@media screen and (min-width: 768px) {
+  #contact-page .three-section-div {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 #contact-page .three-section-div h2 {
@@ -3342,6 +3378,16 @@ h5 {
 #contact-page .three-section-div .text {
   font-size: 16px;
   line-height: 1.4;
+}
+
+#contact-page .three-section-div .address {
+  max-width: 30px;
+  margin-right: 20px;
+}
+
+#contact-page .three-section-div .email, #contact-page .three-section-div .phone {
+  max-width: 40px;
+  margin-right: 20px;
 }
 
 #contact-page .form-title {
@@ -3372,7 +3418,13 @@ h5 {
 }
 
 #contact-page .form-section .form {
-  width: 70%;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #contact-page .form-section .form {
+    width: 70%;
+  }
 }
 
 #contact-page .form-section .form textarea {
@@ -3387,21 +3439,28 @@ h5 {
 #contact-page .form-section input {
   border: 1px solid;
   height: 60px;
+  width: 100%;
 }
 
-#contact-page .form-section .half {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  #contact-page .form-section input {
+    width: unset;
+  }
 }
 
-#contact-page .form-section .half p:first-of-type {
-  width: 50%;
-}
-
-#contact-page .form-section .half p:nth-of-type(2) {
-  width: 50%;
-  margin: 0;
+@media screen and (min-width: 768px) {
+  #contact-page .form-section .half {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #contact-page .form-section .half p:first-of-type {
+    width: 50%;
+  }
+  #contact-page .form-section .half p:nth-of-type(2) {
+    width: 50%;
+    margin: 0;
+  }
 }
 
 #contact-page .form-section .wpcf7-submit {
@@ -3848,5 +3907,14 @@ h5 {
   letter-spacing: 3px;
   display: inline-block;
   margin: 20px;
+}
+
+.single-product .hero-image {
+  position: absolute;
+  top: 0;
+}
+
+.single-product .product {
+  padding-top: 350px;
 }
 /*# sourceMappingURL=style.css.map */

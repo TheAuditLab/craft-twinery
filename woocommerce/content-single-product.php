@@ -21,6 +21,15 @@ global $product;
 
 ?>
 <section id="productSingleTemplateCs">
+	<div class="hero-image" style="background-image: url('<?php bloginfo('template_url'); ?>/images/hero-image.jpg')">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">			
+					<h1 class="title">Product Details</h1>
+				</div>
+			</div>
+		</div>	
+	</div>
 	<div class="container">
 		<?php
 

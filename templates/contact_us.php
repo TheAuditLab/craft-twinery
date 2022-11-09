@@ -29,34 +29,47 @@
 		<div>
 			<div class="container">
 				<div class="three-section-div">
-					<h3>Address</h3>
-					<div class="text">
-						Unit 19,
-						<br> 
-						Morris Green Business Park
-						<br>
-						Prescott Street
-						<br>
-						Bolton
-						<br>
-						BL3 3PE
+					<div><img class="address" src="<?php bloginfo('template_url'); ?>/images/address.png" alt="Address logo"></div>
+					<div>
+						<h3>Address</h3>
+						<div class="text">
+							<p>
+								Unit 19,
+								<br> 
+								Morris Green Business Park
+								<br>
+								Prescott Street
+								<br>
+								Bolton
+								<br>
+								BL3 3PE
+							</p>
+						</div>
 					</div>
 				</div>
 				<div class="three-section-div">
-					<h3>Telephone</h3>
+					<div><img class="phone"  src="<?php bloginfo('template_url'); ?>/images/phone-icon.png" alt="Phone logo"></div>
 					<div>
-						<span>01204 897642</span>
-						<br>
-						Lines open Monday - Friday <br>
-						8:00 - 18:00
+						<h3>Telephone</h3>
+						<div>
+							<p>
+								<span>01204 897642</span>
+								<br>
+								Lines open Monday - Friday <br>
+								8:00 - 18:00
+							</p>
+						</div>
 					</div>
 				</div>
 				<div class="three-section-div">
-					<h3>Email</h3>
+					<div><img class="email" src="<?php bloginfo('template_url'); ?>/images/email.png" alt="Email logo"></div>
 					<div>
-						info@crafttwinery.co.uk <br>
-						contact us via email 24/7
-					</div>
+						<h3>Email</h3>
+						<div>
+							info@crafttwinery.co.uk <br>
+							contact us via email 24/7
+						</div>
+				</div>
 				</div>
 			</div>
 			<div class="form-section">

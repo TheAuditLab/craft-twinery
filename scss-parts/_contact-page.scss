@@ -1,8 +1,15 @@
 #contact-page {
     .container {
-        padding: 100px 0;
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+        padding: 60px 30px;
+        position: relative;
+        z-index: 2;
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            padding: 70px 0;
+        }
     }
     //hero image
     .hero-image {
@@ -131,10 +138,12 @@
                 text-align: left;
                 width: 50%;
                 .half {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    margin: 0 auto;
+                    @media screen and (min-width: 768px) {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        margin: 0 auto;    
+                    }
                     .wpcf7-form-control-wrap {
                         width: 50%;
                     }
@@ -215,15 +224,29 @@
         }
     }
     .three-section-div {
-        width: 30%;
+        width: 100%;
         padding: 20px;
-        border: 2px solid;
+        border: 2px solid var(--orange);
+        margin: 15px 0;
+        min-height: 240px;
+        @media screen and (min-width: 768px) {
+            width: 30%;
+            display: flex;
+        }
         h2 {
             padding-bottom: 10px;
         }
         .text {
             font-size: 16px;
             line-height: 1.4;
+        }
+        .address {
+            max-width: 30px;
+            margin-right: 20px;
+        }
+        .email, .phone {
+            max-width: 40px;
+            margin-right: 20px;
         }
     }
     .form-title {
@@ -246,7 +269,10 @@
             transform: scale(0.8);
         }
         .form {
-            width: 70%;
+            width: 100%;
+            @media screen and (min-width: 768px) {
+                width: 70%;
+            }
             textarea {
                 width: 100%;
             }
@@ -258,15 +284,21 @@
         input {
             border: 1px solid;
             height: 60px;
+            width: 100%;
+            @media screen and (min-width: 768px) {
+                width: unset;
+            }
         }
         .half {
-            display: flex;
-            p:first-of-type{
-                width: 50%;
-            }
-            p:nth-of-type(2) {
-                width: 50%;
-                margin: 0;
+            @media screen and (min-width: 768px) {
+                display: flex;
+                p:first-of-type{
+                    width: 50%;
+                }
+                p:nth-of-type(2) {
+                    width: 50%;
+                    margin: 0;
+                }
             }
         }
         .wpcf7-submit {

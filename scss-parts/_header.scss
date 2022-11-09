@@ -2,6 +2,8 @@
 #header{
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 99;
     .container {
         position: fixed;
         top: 0;
@@ -110,7 +112,6 @@
         }
         .menu-item-has-children  {
             position: relative;
-         
             &:hover {
                 opacity: 1;
             }
@@ -423,6 +424,7 @@
     //menu 
     .menu-item-has-children {
         position: relative;
+        padding-right: 30px;
         @media screen and (min-width: 768px) {
             &:after {
                 content: '▾';
