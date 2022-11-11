@@ -60,15 +60,18 @@
         }
     }
     .button {
-        background: var(--blue);
+        background-color: var(--blue) !important;
         text-transform: uppercase;
         border-radius: 0;
         color: #ffffff;
         padding: 15px 55px;
         font-weight: 100;
-        font-size: 20px;
+        font-size: 16px;
         letter-spacing: 3px;
         display: inline-block;
         margin: 20px;
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+        }
     }
 }

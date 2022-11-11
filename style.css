@@ -1326,6 +1326,16 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   }
 }
 
+.error404 #content {
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .error404 #content {
+    padding: 250px 0 0 !important;
+  }
+}
+
 .search-results #content {
   padding: 50px 0 !important;
 }
@@ -1382,6 +1392,15 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   max-width: 600px;
   background: unset;
   border: 1px solid;
+}
+
+.error404 h1 {
+  font-size: 170px;
+  padding-bottom: 30px;
+}
+
+.error404 #content {
+  text-align: center;
 }
 
 .slide-link {
@@ -3923,16 +3942,22 @@ h5 {
 }
 
 #account-block .button {
-  background: var(--blue);
+  background-color: var(--blue) !important;
   text-transform: uppercase;
   border-radius: 0;
   color: #ffffff;
   padding: 15px 55px;
   font-weight: 100;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 3px;
   display: inline-block;
   margin: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  #account-block .button {
+    font-size: 20px;
+  }
 }
 
 .single-product .hero-image {
@@ -3955,8 +3980,14 @@ h5 {
 }
 
 .single-product .product {
-  margin-top: 350px;
+  margin-top: 250px;
   background: var(--grey);
+}
+
+@media screen and (min-width: 768px) {
+  .single-product .product {
+    margin-top: 350px;
+  }
 }
 
 .single-product .woocommerce .product {
@@ -3967,17 +3998,26 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
+@media screen and (min-width: 768px) {
+  .single-product .product-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
 .single-product .entry-summary {
-  width: 80% !important;
+  width: 100% !important;
   padding: 50px 50px 0 50px;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
@@ -3986,6 +4026,12 @@ h5 {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 0 !important;
+}
+
+@media screen and (min-width: 768px) {
+  .single-product .entry-summary {
+    width: 80% !important;
+  }
 }
 
 .single-product .entry-summary .entry-title {
@@ -4022,5 +4068,11 @@ h5 {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin: 0;
+}
+
+.single-product .quantity .qty {
+  border: 1px solid;
+  height: 20px;
+  text-align: end;
 }
 /*# sourceMappingURL=style.css.map */
