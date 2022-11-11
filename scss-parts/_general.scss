@@ -602,3 +602,9 @@ form .wpcf7-select {
         text-align: center;
     }
 }
+.woocommerce-info {
+    border-top-color: var(--purple);
+}
+.woocommerce-info::before {
+    color: var(--purple);
+}

@@ -1403,6 +1403,14 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   text-align: center;
 }
 
+.woocommerce-info {
+  border-top-color: var(--purple);
+}
+
+.woocommerce-info::before {
+  color: var(--purple);
+}
+
 .slide-link {
   text-transform: uppercase;
   color: #ffffff;
@@ -2819,6 +2827,10 @@ h5 {
 .page-template-contact_us #footer .bottom-footer {
   background: var(--purple);
   color: #ffffff;
+}
+
+.page-template-contact_us #footer .bottom-footer a {
+  color: #ffffff !important;
 }
 
 #footer .bottom-footer .container {
