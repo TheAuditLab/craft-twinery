@@ -1411,6 +1411,10 @@ form .wpcf7-select:focus, form .wpcf7-select:visited {
   color: var(--purple);
 }
 
+.pp-tracking-section {
+  padding-top: 200px;
+}
+
 .slide-link {
   text-transform: uppercase;
   color: #ffffff;
@@ -4007,9 +4011,6 @@ h5 {
 }
 
 .single-product .product-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -4017,6 +4018,7 @@ h5 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  display: -webkit-box;
 }
 
 @media screen and (min-width: 768px) {
@@ -4042,7 +4044,7 @@ h5 {
 
 @media screen and (min-width: 768px) {
   .single-product .entry-summary {
-    width: 80% !important;
+    width: 70% !important;
   }
 }
 
@@ -4086,5 +4088,25 @@ h5 {
   border: 1px solid;
   height: 20px;
   text-align: end;
+}
+
+.single-product .onsale {
+  left: unset !important;
+  top: 10px !important;
+  right: 10px !important;
+  line-height: 2.836 !important;
+  height: 3.236em !important;
+  width: 3.236em !important;
+  background-color: var(--pink) !important;
+}
+
+.single-product .woocommerce-product-gallery {
+  width: 30% !important;
+}
+
+.single-product .woocommerce-product-gallery img {
+  min-height: 700px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */

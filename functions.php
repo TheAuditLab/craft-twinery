@@ -278,3 +278,9 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );
 
+// disabling click on image on product page
+function e12_remove_product_image_link( $html, $post_id ) {
+  return preg_replace( "!<(a|/a).*?>!", '', $html );
+}
+add_filter( 'woocommerce_single_product_image_thumbnail_html', 'e12_remove_product_image_link', 10, 2 );
+

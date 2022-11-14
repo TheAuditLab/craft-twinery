@@ -28,9 +28,9 @@
         }
     }
     .product-info {
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
+        display: -webkit-box;
         @media screen and (min-width: 768px) {
             flex-direction: row-reverse;
         }
@@ -42,7 +42,7 @@
         display: flex;
         margin-bottom: 0 !important;
         @media screen and (min-width: 768px) {
-            width: 80% !important;
+            width: 70% !important;
         }
         .entry-title {
             width: 100%;
@@ -70,6 +70,23 @@
             border: 1px solid;
             height: 20px;
             text-align: end;
+        }
+    }
+    .onsale {
+        left: unset !important;
+        top: 10px !important;
+        right: 10px !important;
+        line-height: 2.836 !important;
+        height: 3.236em !important;
+        width: 3.236em !important;
+        background-color: var(--pink) !important;
+    }
+    .woocommerce-product-gallery {
+        width: 30% !important;
+        img {
+            min-height: 700px !important;
+            object-fit: cover;
+
         }
     }
 }
