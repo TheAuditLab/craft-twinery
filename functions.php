@@ -207,15 +207,6 @@ function useful_links_menu() {
 }
 add_action( 'init', 'useful_links_menu' );
 
-//
-function space_change_custom_taxonomy_slug_args( $taxonomy, $object_type, $args ){
-  if( 'category' == $taxonomy ){ // Instead of the "old-slug", add current slug, which you want to change.
-      remove_action( current_action(), __FUNCTION__ );
-      $args['rewrite'] = array( 'slug' => 'security-solutions' ); // Instead of the "new-slug", add a new slug name.
-      register_taxonomy( $taxonomy, $object_type, $args );
-  }
-}
-add_action( 'registered_taxonomy', 'space_change_custom_taxonomy_slug_args', 10, 3 );
 
 // changing blog excerpt length 
 function mytheme_custom_excerpt_length( $length ) {
@@ -273,14 +264,17 @@ function search_by_product_only( $query ) {
     return $query;
 }
 
-// removing elements on product page
-remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );
+// // removing elements on product page
+// remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );
 
 // disabling click on image on product page
 function e12_remove_product_image_link( $html, $post_id ) {
   return preg_replace( "!<(a|/a).*?>!", '', $html );
 }
 add_filter( 'woocommerce_single_product_image_thumbnail_html', 'e12_remove_product_image_link', 10, 2 );
+
+
+
 
