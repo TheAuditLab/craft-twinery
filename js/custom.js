@@ -62,20 +62,6 @@ jQuery(document).ready(function($) {
     });
 
 
-    // Security product slider
-    $('.security-product-slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        fade: true,
-        autoplay: true,
-        swipeToSlide: true,
-        prevArrow:"<span class='slick-prev' alt='Previous arrow'></span>",
-        nextArrow:"<span class='slick-next' alt='Next arrow'></span>",
-    });
-
-
       // Search Bar Header placeholder text
       headerSearchBar();
 
@@ -87,32 +73,6 @@ jQuery(document).ready(function($) {
                 document.querySelector("[placeholder='Search …']").placeholder = "Search for products";
             }
         }
-    }
-
-    // loading when the page comes in the view
-    $(window).scroll(function() {
-        var $lWrap = $('.l-wrap');
-        var $rWrap = $('.r-wrap');
-        if (width < 768) {
-            if (window.pageYOffset >= 3001) {
-                $lWrap.addClass('left-wrap');
-                $rWrap.addClass('right-wrap');
-            }
-            if (window.pageYOffset <= 3000) {
-                $lWrap.removeClass('left-wrap');
-                $rWrap.removeClass('right-wrap');
-            }
-        }
-        if (width >= 768) {
-            if (window.pageYOffset >= 1501) {
-                $lWrap.addClass('left-wrap');
-                $rWrap.addClass('right-wrap');
-            }
-            if (window.pageYOffset <= 1500) {
-                $lWrap.removeClass('left-wrap');
-                $rWrap.removeClass('right-wrap');
-            }
-        }
-    });
+    } 
 });
 
